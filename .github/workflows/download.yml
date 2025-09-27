@@ -1,8 +1,10 @@
 name: Download and Commit File
 
 on:
-  push:
-    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   download:
@@ -10,6 +12,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Download file
         run: curl -L "https://example.com/file.zip" -o "file.zip"
