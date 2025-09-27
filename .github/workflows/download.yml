@@ -16,7 +16,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Download file
-        run: curl -L "https://example.com/file.zip" -o "file.zip"
+        run: curl -L "https://server.emulatorgames.net/server4/roms/playstation-portable/WWE%20SmackDown!%20vs.%20RAW%202011%20(USA).zip" -o "wwe.zip"
 
       - name: Commit and push file
         run: |
