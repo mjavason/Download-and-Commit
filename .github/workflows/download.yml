@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Download file
-        run: curl -L "https://example.com/file.zip" -o "file.zip"
+        run: curl -L "https://example.com/file.zip" -o "file.html"
 
       - name: Commit and push file
         run: |
